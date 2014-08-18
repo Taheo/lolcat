@@ -1,0 +1,10 @@
+
+<h1>Hello. Welcome in daily lolcat app.</h1>
+<%= simple_form_for @subscription do |f| %>
+  <%= f.input :email %>
+  <%= f.submit "Sign for subscription" %>
+    <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
+<% end %>
+
