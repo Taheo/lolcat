@@ -15,6 +15,9 @@ class SubscriptionsController < ApplicationController
 	end
 	#def unsub
     #end
+    def default_url_options
+    { locale: I18n.locale }
+  end
  
 private
   def subscription_params
