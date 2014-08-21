@@ -1,5 +1,5 @@
 
-<h1>Hello. Welcome in daily lolcat app.</h1>
+<center><h1 style="line-height: 4cm">Hello. Welcome in daily lolcat app.</h1></center>
 <%= simple_form_for @subscription do |f| %>
   <%= f.input :email %>
   <%= f.submit "Sign for subscription" %>
@@ -7,4 +7,14 @@
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
 <% end %>
+
+<ul> 
+  <% @kitties.each do |kitty| %>
+    <li>
+      <%= image_tag kitty.image.url(:medium) %>
+    </li>
+  <% end %>
+</ul>
+
+<% paginate @kitties %>
 

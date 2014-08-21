@@ -1,6 +1,8 @@
 class SubscriptionsController < ApplicationController
 	def new
 		@subscription = Subscription.new 
+
+        @kitties = Kitty.order("created_at").page(params[:page])
 	end
 	def create
 	  @subscription = Subscription.new(subscription_params)
