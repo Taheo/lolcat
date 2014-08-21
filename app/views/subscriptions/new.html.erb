@@ -3,7 +3,7 @@
 
 <%= simple_form_for @subscription, html: { class: "form" } do |f| %>
   <%= f.input :email, label: false, placeholder: "Podaj Email" %>
-  <%= button_tag "Sign for subscription" %>
+  <%= button_tag "Sign for subscription", class: 'btn' %>
     <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
