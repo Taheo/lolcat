@@ -1,20 +1,23 @@
 
-<center><h1 style="line-height: 4cm">Hello. Welcome in daily lolcat app.</h1></center>
-<%= simple_form_for @subscription do |f| %>
-  <%= f.input :email %>
-  <%= f.submit "Sign for subscription" %>
+<h1>Hello. Welcome in daily lolcat app.</h1>
+
+<%= simple_form_for @subscription, html: { class: "form" } do |f| %>
+  <%= f.input :email, label: false, placeholder: "Podaj Email" %>
+  <%= button_tag "Sign for subscription" %>
     <% if flash[:notice] %>
     <div class="notice"><%= flash[:notice] %></div>
   <% end %>
 <% end %>
 
-<ul> 
+<ul class="archive-images"> 
   <% @kitties.each do |kitty| %>
     <li>
-      <%= image_tag kitty.image.url(:medium) %>
+      <%= link_to kitty.image.url(:big), target: '_blank' do %>
+        <%= image_tag kitty.image.url(:medium) %>
+  	  <% end %>
     </li>
   <% end %>
 </ul>
 
-<% paginate @kitties %>
+<%= paginate @kitties %>
 
