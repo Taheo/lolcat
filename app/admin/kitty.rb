@@ -12,16 +12,9 @@ ActiveAdmin.register Kitty do
       column :created_at
       column :updated_at
       column :image
+      column :sent_at
     end
   
-    
-
-
-
-
-
-
-
 
   
   form do |f|
