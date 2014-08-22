@@ -2,7 +2,7 @@ class SubscriptionsController < ApplicationController
 	def new
 		@subscription = Subscription.new 
 
-        @kitties = Kitty.order("created_at").page(params[:page]).per(1)
+        @kitties = Kitty.where.not('sent_at' => nil).order("created_at").page(params[:page]).per(1)
 	end
 	def create
 	  @subscription = Subscription.new(subscription_params)

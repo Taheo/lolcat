@@ -2,9 +2,10 @@ ActiveAdmin.register Kitty do
   permit_params :image
 
   #controller do 
-    def pag 
-      @Kitties = Kitty.order("created_at").page(params[:page])
-    end
+    #def pag 
+      #@Kitties = Kitty.order("created_at").page(params[:page])
+
+    #end
   #end
 
     index do
@@ -14,8 +15,6 @@ ActiveAdmin.register Kitty do
       column :image
       column :sent_at
     end
-  
-
   
   form do |f|
     f.inputs "Kitty" do
