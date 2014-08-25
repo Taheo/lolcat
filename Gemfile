@@ -6,10 +6,14 @@ gem 'execjs'
 gem 'therubyracer'
 gem 'mysql'
 gem 'whenever'
-gem 'activeadmin'#, github: 'gregbell/active_admin'
+gem 'activeadmin',
+:path => "vendor/activeadmin-0.6.3"
+#, github: 'gregbell/active_admin'
 gem 'devise', '~> 3.2.4'
 gem 'carrierwave'
-gem 'rmagick', '2.13.2'#, :git=>'http://github.com/rmagick/rmagick.git'
+gem 'rmagick', '2.13.2',
+:path => "vendor/rmagick-2.13.2"
+#, :git=>'http://github.com/rmagick/rmagick.git'
 gem 'kaminari'
 
 
