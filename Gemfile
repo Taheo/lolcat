@@ -12,6 +12,7 @@ gem 'activeadmin', :path => "vendor/gems/activeadmin", require: 'activeadmin'
 gem 'devise', '~> 3.2.4'
 gem 'carrierwave'
 gem 'rmagick', '2.13.2', :path => "vendor/gems/rmagick-2.13.2"
+gem 'pg'
 
 #, :git=>'http://github.com/rmagick/rmagick.git'
 gem 'kaminari'
