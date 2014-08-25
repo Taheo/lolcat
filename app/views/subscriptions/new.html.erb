@@ -10,6 +10,7 @@
 <% end %>
 
 <ul class="archive-images"> 
+
   <% @kitties.each do |kitty| %>
     <li>
       <%= link_to kitty.image.url(:big), target: '_blank' do %>

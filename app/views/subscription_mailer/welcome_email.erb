@@ -10,5 +10,8 @@
    
     <%= image_tag @image_path %>
 
+    <p style="font-size:18px">>Or maybe u feel boring? Always u can unsubscribe, just click link below:</p>
+    <%=link_to "Delete",unsub_subscriptions_url(email: @subscription.email), :class => "delete" %>
+
   </body>
 </html>

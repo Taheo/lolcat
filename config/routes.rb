@@ -7,7 +7,11 @@ Lolcat::Application.routes.draw do
   # You can have the root of your site routed with "root"
    root :to => 'subscriptions#new'
 
-   resources :subscriptions, only: [:new, :create]
+   resources :subscriptions, only: [:new, :create] do
+    collection do
+      get :unsub
+    end
+   end
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
