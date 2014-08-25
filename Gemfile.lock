@@ -14,11 +14,6 @@ PATH
       ransack (~> 1.0)
       sass-rails
 
-PATH
-  remote: vendor/gems/rmagick-2.13.2
-  specs:
-    rmagick (2.13.2)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -138,6 +133,7 @@ GEM
     ref (1.0.5)
     responders (1.0.0)
       railties (>= 3.2, < 5)
+    rmagick (2.13.2)
     sass (3.2.19)
     sass-rails (4.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -196,7 +192,7 @@ DEPENDENCIES
   mysql
   pg
   rails (= 4.0.0)
-  rmagick (= 2.13.2)!
+  rmagick (= 2.13.2)
   sass-rails (~> 4.0.0)
   sdoc
   simple_form
